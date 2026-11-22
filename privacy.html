@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>개인정보처리방침 · Routine Desk</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <p><a href="index.html">← Routine Desk</a></p>
+    <h1>개인정보처리방침</h1>
+    <p class="muted">시행일: 2026년 11월 22일</p>
+
+    <p>Routine Desk(이하 "앱")는 개발자 본인이 자신의 Windows PC에서 쓰기 위해 만든 데스크톱 앱입니다.
+      앱에는 별도의 서버가 없으며, 개발자는 사용자의 데이터를 수집하거나 전송받지 않습니다.</p>
+
+    <h2>1. 접근하는 Google 데이터</h2>
+    <ul>
+      <li><b>Gmail (읽기 전용, <code>gmail.readonly</code>)</b> — 읽지 않은 중요 메일(최근 3일, 프로모션·소셜 제외)의 보낸 사람, 제목, 미리보기, 받은 시각을 읽어 화면에 표시합니다. 메일을 보내거나 삭제하거나 수정하지 않습니다.</li>
+      <li><b>Google 캘린더 (<code>calendar.readonly</code>, <code>calendar.events</code>)</b> — 일정을 읽어 월간 캘린더에 표시하고, 사용자가 앱에서 직접 입력하거나 삭제한 일정만 추가·삭제합니다.</li>
+    </ul>
+
+    <h2>2. 데이터 저장</h2>
+    <ul>
+      <li>OAuth 토큰, 설정, 스티키 노트, 에이전트 응답 캐시는 사용자 PC의 <code>%APPDATA%\Routine Desk\</code> 폴더에만 저장됩니다.</li>
+      <li>메일과 일정 내용은 화면 표시를 위해 메모리에서만 사용하며, 앱 서버로 보내지 않습니다(앱 서버는 없습니다).</li>
+    </ul>
+
+    <h2>3. AI 에이전트 기능</h2>
+    <p>앱 하단의 에이전트 기능은 사용자가 자신의 PC에 직접 설치하고 로그인한 Claude Code(Anthropic)와 Codex CLI(OpenAI)를 실행합니다.
+      이때 다음 정보가 해당 CLI에 전달되고, 각 서비스의 서버에서 처리됩니다.</p>
+    <ul>
+      <li>지난 3일~앞으로 14일의 일정 제목·시간·장소</li>
+      <li>최근 스티키 노트 내용</li>
+      <li>중요 메일의 보낸 사람과 제목 (메일 본문은 전달하지 않습니다)</li>
+    </ul>
+    <p>이 처리는 사용자 본인 계정과 각 서비스의 약관·개인정보처리방침을 따릅니다.
+      CLI를 설치하지 않거나 에이전트 패널을 쓰지 않으면 전달되지 않습니다.
+      Google 사용자 데이터는 광고 목적으로 쓰거나 제3자에게 판매하지 않습니다.</p>
+
+    <h2>4. 연결 해제와 삭제</h2>
+    <ul>
+      <li>앱의 <b>설정 → 연결 해제</b>를 누르면 저장된 Google 토큰이 삭제됩니다.</li>
+      <li><a href="https://myaccount.google.com/permissions">Google 계정 → 타사 액세스</a>에서도 언제든 권한을 철회할 수 있습니다.</li>
+      <li><code>%APPDATA%\Routine Desk\</code> 폴더를 지우면 앱의 모든 로컬 데이터가 삭제됩니다.</li>
+    </ul>
+
+    <h2>5. 문의</h2>
+    <p>이 방침에 대한 문의는 Google OAuth 동의 화면에 등록된 지원 이메일로 연락해 주세요.</p>
+  </main>
+</body>
+</html>
